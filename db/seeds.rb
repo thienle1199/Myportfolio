@@ -24,7 +24,7 @@ puts '5 times skill created'
     title: Faker::Job.title,
     subtitle: Faker::Job.field,
     body: Faker::SiliconValley.quote,
-    main_image: Faker::LoremPixel.image("600x400"),
-    thumb_image: Faker::LoremPixel.image("350x150")
+    main_image: Faker::Placeholdit.image("600x400"),
+    thumb_image: Faker::Placeholdit.image("350x150")
   )
 end
