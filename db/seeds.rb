@@ -27,4 +27,12 @@ puts '5 times skill created'
     main_image: Faker::Placeholdit.image("600x400"),
     thumb_image: Faker::Placeholdit.image("350x150")
   )
+puts '9 portfolio items created'
 end
+3.times do |tech|
+  Technology.create!(
+    name: "Technology #{tech}",
+    portfolio_id: Portfolio.last.id
+  )
+end
+puts '3 technologies created'

@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  has_many :technologies
   include Placeholder
   # implement custom scope
   def self.anglular
