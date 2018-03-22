@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio, only: %i[show edit update destroy]
   def index
     @portfolio_items = Portfolio.all
   end
@@ -8,9 +9,8 @@ class PortfoliosController < ApplicationController
     3.times { @portfolio_item.technologies.build }
   end
 
-  def show
-    @portfolio_item = Portfolio.find(params[:id])
-  end
+  def show; end
+
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
     if @portfolio_item.save
@@ -20,27 +20,32 @@ class PortfoliosController < ApplicationController
     end
   end
 
-  def edit
-    @portfolio_item = Portfolio.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @portfolio_item = Portfolio.find(params[:id])
     if @portfolio_item.update(portfolio_params)
-      redirect_to portfolios_path, notice: 'Your portfolio was successfully updated'
+      redirect_to portfolios_path,
+      notice: 'Your portfolio was successfully updated'
     else
       render 'new'
     end
   end
 
   def destroy
-    @portfolio_item = Portfolio.find(params[:id])
     @portfolio_item.destroy
     redirect_to portfolios_path
   end
-  private
-    def portfolio_params
-      params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
-    end
 
+  private
+
+  def portfolio_params
+    params.require(:portfolio).permit(:title,
+                                      :subtitle,
+                                      :body,
+                                      technologies_attributes: [:name])
+  end
+
+  def set_portfolio
+    @portfolio_item = Portfolio.find(params[:id])
+  end
 end
