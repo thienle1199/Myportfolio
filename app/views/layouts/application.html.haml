@@ -7,11 +7,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p= link_to 'Home', root_path
-    %p= link_to 'About', about_path
-    %p= link_to 'Contact', contact_path
-    %p= link_to 'Blogs', blogs_path
-    %p= link_to 'Portfolios', portfolios_path
+    = render 'shared/navbar'
     %p.notice= notice
     %p.alert= alert
     - if current_user.is_a?(User)
