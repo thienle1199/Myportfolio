@@ -25,7 +25,7 @@ class PortfoliosController < ApplicationController
   def update
     if @portfolio_item.update(portfolio_params)
       redirect_to portfolios_path,
-      notice: 'Your portfolio was successfully updated'
+                  notice: 'Your portfolio was successfully updated'
     else
       render 'new'
     end
