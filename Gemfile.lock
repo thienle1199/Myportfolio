@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/thienle1199/thienle_view_tool
+  revision: 6ad8244393c33da591faa1a8d16ec3984f06b04d
+  specs:
+    thienle_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -260,6 +266,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sprockets-rails
+  thienle_view_tool!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

@@ -61,3 +61,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'thienle_view_tool', git: 'https://github.com/thienle1199/thienle_view_tool'
