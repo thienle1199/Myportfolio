@@ -52,10 +52,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'meta_request'
   gem 'haml'
-  gem 'haml-rails'
   gem 'haml-lint'
+  gem 'haml-rails'
   gem 'rubocop'
   gem "awesome_print", require:"ap"
+  gem 'annotate'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

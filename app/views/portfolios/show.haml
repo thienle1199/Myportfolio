@@ -1,8 +1,9 @@
 - provide(:title, @portfolio_item.title)
-= image_tag @portfolio_item.main_image
-%h1= @portfolio_item.title
-%em= @portfolio_item.subtitle
-%p= @portfolio_item.body
-%h2 Technologies Used:
-- @portfolio_item.technologies.each do |t|
-  %p= t.name
+.portfolio-item
+  = image_tag @portfolio_item.main_image
+  %h1= @portfolio_item.title
+  %em= @portfolio_item.subtitle
+  %p= @portfolio_item.body
+  %h2 Technologies Used:
+  - @portfolio_item.technologies.each do |t|
+    %p= t.name

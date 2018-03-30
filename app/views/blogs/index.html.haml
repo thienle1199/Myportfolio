@@ -11,4 +11,4 @@
   %tbody
     = render @blogs
 %br/
-= link_to 'New Blog', new_blog_path
+= link_to 'New Blog', new_blog_path if can? :create, Blog

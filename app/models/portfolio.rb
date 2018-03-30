@@ -1,5 +1,19 @@
+# == Schema Information
+#
+# Table name: portfolios
+#
+#  id          :integer          not null, primary key
+#  title       :string
+#  subtitle    :string
+#  body        :text
+#  main_image  :text
+#  thumb_image :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Portfolio < ApplicationRecord
-  has_many :technologies
+  has_many :technologies, dependent: :destroy
   accepts_nested_attributes_for :technologies,
                                 reject_if: proc { |attrs| attrs['name'].blank?}
   include Placeholder

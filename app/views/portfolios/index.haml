@@ -1,4 +1,4 @@
 - provide(:title, 'Portfolio Items')
 %h1 Portfolio Items
-= link_to 'Create new item', new_portfolio_path
+= link_to 'Create new item', new_portfolio_path if can? :create, Portfolio
 = render partial: 'portfolio_item', collection: @portfolio_items

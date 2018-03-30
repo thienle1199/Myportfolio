@@ -2,7 +2,7 @@
   %td= blog.title
   %td #{time_ago_in_words(blog.created_at)} ago
   %td= blog.body
-  %td= link_to blog.status, toggle_status_blog_path(blog)
-  %td= link_to 'Show', blog
-  %td= link_to 'Edit', edit_blog_path(blog)
-  %td= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }
+  %td= link_to blog.status, toggle_status_blog_path(blog) if can? :toggle_status, Blog
+  %td= link_to 'Show', blog if can? :read, blog
+  %td= link_to 'Edit', edit_blog_path(blog) if can? :edit, blog
+  %td= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, blog
