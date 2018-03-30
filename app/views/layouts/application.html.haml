@@ -9,10 +9,8 @@
                               media: 'all',
                              'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
   %body
-    .container
-      = render 'shared/navbar'
-      %p.notice= notice
-      %p.alert= alert
-      = copyright_generator 'Thienle', 'All right reserved'
+    = render 'shared/navbar'
+    = copyright_generator 'Thienle', 'All right reserved'
     = source_helper('Application')
