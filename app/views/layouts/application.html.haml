@@ -11,6 +11,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
-    = render 'shared/navbar'
-    = copyright_generator 'Thienle', 'All right reserved'
-    = source_helper('Application')
+    %body.text-center
+      .cover-container.d-flex.h-100.p-3.mx-auto.flex-column
+        = render 'shared/navbar'
+        = yield
+        = render 'layouts/footer'
+        = source_helper('Application')
