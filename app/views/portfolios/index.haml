@@ -1,4 +1,31 @@
 - provide(:title, 'Portfolio Items')
+#portfolio.portfolio{:style => "margin-top:100px;"}
+.container
+  .row
+    .col-12.col-md-7
+      %h1.title.grey Portfolio...
+      %h2 I Make Beautiful Things!
+    .col-12.col-md-5.text-right{:style => "margin-top: 100px;"}
+      %a{:href => "#"} View All Projects
+.projects
+  .container-fluid{:style => "margin-top: 100px;"}
+    .row
+      .col-md-6
+        %img.img-responsive.img-fluid.img{:alt => "Project1", :src => "assets/project01.png"}/
+        .row
+          .col-md-6
+            %img.img-responsive.img-fluid.img{:alt => "Project2", :src => "assets/project02.png"}/
+          .col-md-6
+            %img.img-responsive.img-fluid.img{:alt => "Project3", :src => "assets/project03.png"}/
+      .col-md-6
+        .row
+          .col-md-6
+            %img.img-responsive.img-fluid.img{:alt => "Project4", :src => "assets/project04.png"}/
+          .col-md-6
+            %img.img-responsive.img-fluid.img{:alt => "Project5", :src => "assets/project05.png"}/
+            %img.img-responsive.img-fluid.img{:alt => "Project6", :src => "assets/project06.png"}/
+
+
 %h1 Portfolio Items
 = link_to 'Create new item', new_portfolio_path if can? :create, Portfolio
 = render partial: 'portfolio_item', collection: @portfolio_items

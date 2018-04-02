@@ -1,14 +1,49 @@
 - provide(:title, 'Blogs')
-%p#notice= notice
-%h1 Blogs
-%table
-  %thead
-    %tr
-      %th Title
-      %th Date
-      %th Body
-      %th{:colspan => "4"}
-  %tbody
-    = render @blogs
-%br/
-= link_to 'New Blog', new_blog_path if can? :create, Blog
+#blog.blog
+  .container
+    %h1.title.grey Blog...
+    .row
+      .col-md-6
+        %h2 Do Not Miss the Useful Articles
+        %p Mirum est notare quam littera gothica, quam nunc parum claram...
+        .quote
+          %p.date 6 October
+          %a{:href => ""}
+            %p.citation “Eodem modo typi, qui nunc nobis videntur parum clari, sollemnes parum”
+          %p.author Jonathan Miller
+      .col-md-6
+        .gallery
+          %p.dategallery 9 October
+          %a{:href => ""}
+            %p.h1.titlegallery Gallery Post Format
+          %p.descriptiongallery
+            Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus.
+          .linkspace
+            %a.gallerylink{:href => "#"}
+              Read More
+    .row{:style => "padding:0;margin:0;"}
+      .col-md-6
+        .row
+          .col-md-6
+            .standardformat
+              %p.datestandardformat 3 September
+              %a{:href => ""}
+                %p.textstandardformat Standard Post Format
+          .col-md-6
+            .videoformat
+              %p.videoformatdate 20 September
+              %a{:href => ""}
+                %p.videoformattext Video Post Format
+      .col-md-6
+        .row
+          .col-md-8
+            .standartwhimg
+              %p.datestandartwhimg 23 Junes
+              %a{:href => ""}
+                %p.titlestandartwhimg Standard Post Format without Preview Img
+              %p.textstandartwhimg
+                Qui nunc nobis videntur parum clari, sollemnes legere.
+          .col-md-4
+            .viewallpost
+              %a{:href => ""}
+                %p.viewallposttext View all

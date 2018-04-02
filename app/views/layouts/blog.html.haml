@@ -1,6 +1,6 @@
 !!!
 %html
-  %head 
+  %head
     %meta{ :content => 'text/html; charset=UTF-8',
           'http-equiv' => 'Content-Type' }
     %title= full_title(yield(:title))
@@ -11,5 +11,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .container
+      %header.blog-header.py-3
       = yield
+      = render 'layouts/footer'
     = source_helper('Blogs')
