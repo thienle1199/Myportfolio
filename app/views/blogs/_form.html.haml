@@ -7,14 +7,11 @@
       %ul
         - blog.errors.full_messages.each do |message|
           %li= message
-  .field
+  .form-group
     = form.label :title
-    = form.text_field :title, id: :blog_title
-  .field
+    = form.text_field :title, id: :blog_title, class: 'form-control'
+  .form-group
     = form.label :body
-    = form.text_area :body, id: :blog_body
-  .field
-    = form.label :topic_id
-    = form.text_field :topic_id  
+    = form.text_area :body, id: :blog_body, class: 'form-control', rows: 10
   .actions
-    = form.submit
+    = form.submit "#{blog.new_record? ? 'Post' : 'Update'}", class: 'btn btn-primary'

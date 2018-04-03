@@ -1,3 +1,33 @@
 - provide(:title, 'Contact')
-%h1 Pages#contact
-%p Find me in app/views/pages/contact.html.haml
+#contacts.contacts
+  .container
+    .row
+      .col-md-6{:style => "padding-left: 0px;"}
+        %h2 Contact Information
+        %p{:style => "color:white;"}
+          %span.grey.h3 You can find me here:
+          %br/
+          186 Ap Tan Hanh, Xuan Bao, Cam My, Dong Nai
+          %br/
+          %iframe{ src: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15674.041236961953!2d107.28438415!3d10.848737199999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174fffed1b1de5d%3A0x82e0a79e62caed60!2zQ2jhu6MgWHXDom4gQuG6o28!5e0!3m2!1svi!2s!4v1522596045030", width: "500", height: "350", frameborder: "0", style: "border:0", allowfullscreen: '' }
+          %br/
+      .col-md-6
+        %h2 Get In Touch
+        %p
+          %span.grey.h3 You can contact with me using this form.
+        %form{:action => "#"}
+          .row
+            .col-md-6
+              %input.form-control.input{:placeholder => "Your Name", :type => "text"}/
+            .col-md-6{:style => "padding-bottom: 40px;"}
+              %input.form-control.input{:placeholder => "Your Email Adress", :type => "text"}/
+          .row
+            .col-md-12
+              %textarea#contactarea.form-control{:cols => "15", :name => "contactarea", :placeholder => "Tape in your message", :rows => "4"}
+          .row
+            .col-md-12{:style => "padding-top: 30px"}
+              %input.form-control{:type => "submit", :value => "Send"}/
+              %br/
+              %span.grey Phone: +84 096 369 291
+              %br/
+              %a{:href => ""} thienle.luong@gmail.com

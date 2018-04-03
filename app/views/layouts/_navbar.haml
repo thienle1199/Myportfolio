@@ -1,0 +1,31 @@
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container
+    %a.navbar-brand{ href: '/' }
+      = image_tag 'logo'
+      - name = current_user.name
+      #{name} #{'(admin)' if current_user.admin}
+    %button.navbar-toggler{ 'data-target': '#navbar-content',
+                            'data-toggle': 'collapse' }
+      %span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbar-content
+      %ul.navbar-nav.mr-auto.mx-auto
+        %li.nav-item
+          = link_to 'Home', root_path, class: "nav-link #{'active' if current_page? root_path}"
+        %li.nav-item
+          = link_to 'About me', about_path, class: "nav-link #{'active' if current_page? about_path}"
+        %li.nav-item
+          = link_to 'Portfolio', portfolios_path, class: "nav-link #{'active' if current_page? portfolios_path}"
+        %li.nav-item
+          = link_to 'Blog', blogs_path, class: "nav-link #{'active' if current_page? blogs_path}"
+        - if current_user.is_a?(GuestUser)
+          %li.nav-item
+            = link_to 'Register', new_user_registration_path, class: "nav-link #{'active' if current_page? new_user_registration_path}"
+          %li.nav-item
+            = link_to 'Log in', new_user_session_path, class: "nav-link #{'active' if current_page? new_user_session_path}"
+        - else
+          %li.nav-item
+            = link_to 'Log out', destroy_user_session_path,
+                                 method: :delete, class: 'nav-link'
+      .form-inline.my-2.my-lg-0
+        %li.nav-item.right-link
+          = link_to 'Contact me', contact_path, class: 'nav-link'

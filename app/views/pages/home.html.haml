@@ -1,2 +1,11 @@
 - provide(:title, 'Home')
-%h1 Hi #{current_user.first_name}
+%header#home
+  .container
+    %h1 Hi there!
+    %h2
+      My Name is
+      %span Thienle
+    %h3 I’m a Full-stack Web Developer
+    %p
+      I design and build fully fuctional Web Applications using Ruby on Rails framework
+    %a{ href: 'about' } About Me

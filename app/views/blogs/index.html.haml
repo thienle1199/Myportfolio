@@ -1,14 +1,7 @@
 - provide(:title, 'Blogs')
-%p#notice= notice
-%h1 Blogs
-%table
-  %thead
-    %tr
-      %th Title
-      %th Date
-      %th Body
-      %th{:colspan => "4"}
-  %tbody
-    = render @blogs
-%br/
-= link_to 'New Blog', new_blog_path if can? :create, Blog
+= render 'feature_post'
+.col-md-8.blog-main
+  = link_to 'Create new blog', new_blog_path if can? :create, Blog
+  = paginate @blogs
+  = render @blogs
+  = paginate @blogs

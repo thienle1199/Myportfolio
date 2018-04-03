@@ -1,4 +1,5 @@
 - provide(:title, 'New Blog')
-%h1 New Blog
-= render 'form', blog: @blog
-= link_to 'Back', blogs_path
+.col-md-8.blog-main.mt-3
+  %h1 New Blog
+  = render 'form', blog: @blog
+  = link_to 'Back', blogs_path

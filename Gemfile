@@ -21,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap'
 gem 'sprockets-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'cancancan'
 
 # Use CoffeeScript for .coffee assets and views
@@ -37,6 +38,8 @@ gem 'friendly_id'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'faker'
+gem 'font-awesome-sass'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

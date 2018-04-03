@@ -1,0 +1,37 @@
+.navbar-dark .navbar-brand {
+  &:hover{
+  	color: #8799a3;}
+	font-family: 'Coustard', serif;
+	font-size: 36px;
+	color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	color: rgba(255, 255, 255, .5);
+	font-size: 18px;
+	font-family: "Work Sans";
+  font-weight: 500;
+  border-bottom: .25rem solid transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+  border-bottom-color: #fff;
+}
+
+.navbar-dark .navbar-nav .active{
+	color: #fff;
+  border-bottom-color: #fff;
+}
+
+.right-link a{
+	color: #ffff00;
+	border: 2px solid #ffff00;
+	padding:5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 15px;
+}
+
+.right-link{
+	list-style-type: none;
+}
