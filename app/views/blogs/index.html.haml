@@ -2,7 +2,6 @@
 = render 'feature_post'
 .col-md-8.blog-main
   = link_to 'Create new blog', new_blog_path if can? :create, Blog
+  = paginate @blogs
   = render @blogs
-  %nav.blog-pagination
-    %a.btn.btn-outline-primary{ href: '#' } Older
-    %a.btn.btn-outline-secondary.disabled{ href: '#' } Newer
+  = paginate @blogs
