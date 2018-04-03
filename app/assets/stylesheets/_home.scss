@@ -1,0 +1,48 @@
+#home {
+  margin-top: 110px;
+  padding-left: 170px;
+  h1{
+  	color: #000;
+  	font-family: 'Leckerli One', cursive;
+  	font-size: 36px;
+  }
+
+  h2{
+    span {
+      color: #0081ff;
+    }
+  	font-family: 'Montserrat', sans-serif;
+  	font-size: 60px;
+    font-weight: 800;
+  	color: #000;
+  }
+
+  h3{
+  	font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+  	font-size: 40px;
+  	color: #000;
+  }
+
+  p{
+  	color: #636363;
+  	font-size: 24px;
+  	font-family: 'Cambay', sans-serif;
+  	margin-top: 25px;
+    margin-bottom: 45px;
+  }
+
+  a{
+  	color: #000;
+  	font-size: 14px;
+  	font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+  	background-color: rgba(146,146,146, 0.3);
+  	padding-top: 25px;
+  	padding-bottom: 25px;
+  	padding-right: 40px;
+  	padding-left: 40px;
+  	border-radius: 30px;
+    border: 1px solid #0081ff;
+  }
+}
