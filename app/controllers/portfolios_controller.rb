@@ -2,7 +2,7 @@ class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: %i[show edit update destroy]
   authorize_resource
   def index
-    @portfolio_items = Portfolio.all
+    @portfolio_items = Portfolio.by_position
   end
 
   def new
