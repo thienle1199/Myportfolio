@@ -9,5 +9,5 @@
     .container
       %h1 Portfolio Items
       = link_to 'Create new item', new_portfolio_path if can? :create, Portfolio
-      .row.sortable
+      .row{ class: "#{'sortable' if current_user.admin?}"}
         = render partial: 'portfolio_item', collection: @portfolio_items
