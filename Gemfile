@@ -21,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap'
 gem 'sprockets-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'cancancan'
 
 # Use CoffeeScript for .coffee assets and views
