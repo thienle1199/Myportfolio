@@ -2,7 +2,8 @@
   .container
     %a.navbar-brand{ href: '/' }
       = image_tag 'logo'
-      thienle
+      - name = current_user.name
+      #{name} #{'(admin)' if current_user.admin}
     %button.navbar-toggler{ 'data-target': '#navbar-content',
                             'data-toggle': 'collapse' }
       %span.navbar-toggler-icon

@@ -1,6 +1,13 @@
 - provide(:title, 'Portfolio Items')
-#portfolio.portfolio{:style => "margin-top:100px;"}
-  .container
-    %h1 Portfolio Items
-    = link_to 'Create new item', new_portfolio_path if can? :create, Portfolio
-    = render partial: 'portfolio_item', collection: @portfolio_items
+#portfolio.portfolio
+  %main{:role => "main"}
+  %section.jumbotron.text-center
+    .container
+      %h1.jumbotron-heading What i have created
+      %p.lead.text-muted Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.
+  .album.py-5.bg-light
+    .container
+      %h1 Portfolio Items
+      = link_to 'Create new item', new_portfolio_path if can? :create, Portfolio
+      .row
+        = render partial: 'portfolio_item', collection: @portfolio_items

@@ -7,7 +7,7 @@ end
   Blog.create!(
     title: Faker::SiliconValley.invention,
     body: Faker::SiliconValley.quote,
-    topic_id: Topic.last.id
+    user_id: User.ids.sample
   )
 end
 

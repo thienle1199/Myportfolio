@@ -9,16 +9,16 @@
 #  updated_at :datetime         not null
 #  slug       :string
 #  status     :integer          default("draft")
-#  topic_id   :integer
+#  user_id    :integer
 #
 # Indexes
 #
-#  index_blogs_on_slug      (slug) UNIQUE
-#  index_blogs_on_topic_id  (topic_id)
+#  index_blogs_on_slug     (slug) UNIQUE
+#  index_blogs_on_user_id  (user_id)
 #
 # Foreign Keys
 #
-#  fk_rails_...  (topic_id => topics.id)
+#  fk_rails_...  (user_id => users.id)
 #
 
 class Blog < ApplicationRecord
@@ -26,5 +26,5 @@ class Blog < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
   validates_presence_of :title, :body
-  belongs_to :topic
+  belongs_to :user
 end

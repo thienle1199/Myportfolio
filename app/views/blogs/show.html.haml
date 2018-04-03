@@ -1,11 +1,9 @@
 - provide(:title, @blog.title)
 .col-md-8.blog-main
   %h2.blog-post-title= @blog.title.upcase
-  %p.blog-post-meta Pushlished #{time_ago_in_words(@blog.created_at)} ago
+  %p.blog-post-meta Pushlished #{time_ago_in_words(@blog.created_at)} ago by #{@blog.user.name}
   %p.blog-post-meta
-    = link_to @blog.status, toggle_status_blog_path(@blog) if can? :toggle_status, Blog
-    \/
-    = link_to 'Show', @blog if can? :read, @blog
+    = link_to @blog.status, toggle_status_blog_path(@blog) if can? :toggle_status, @blog
     \/
     = link_to 'Edit', edit_blog_path(@blog) if can? :edit, @blog
     \/

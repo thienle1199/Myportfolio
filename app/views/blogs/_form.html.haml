@@ -13,8 +13,5 @@
   .form-group
     = form.label :body
     = form.text_area :body, id: :blog_body, class: 'form-control', rows: 10
-  .form-group
-    = form.label :topic_id
-    = form.text_field :topic_id, class: 'form-control'
   .actions
     = form.submit "#{blog.new_record? ? 'Post' : 'Update'}", class: 'btn btn-primary'
