@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{ content: 'width=device-width,
+           initial-scale=1, shrink-to-fit=no',
+           name: 'viewport' }
+    %title= full_title(yield(:title))
+    = csrf_meta_tags
+    = stylesheet_link_tag    'blogs',
+                              media: 'all',
+                             'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    = render 'layouts/navbar'
+    %main.container{:role => "main"}
+      .row
+        = yield
+        = render 'blog_sidebar'
+    = render 'layouts/footer'
+    = source_helper('Application')

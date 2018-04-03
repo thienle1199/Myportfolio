@@ -1,11 +1,14 @@
 - provide(:title, @blog.title)
-%p#notice= notice
-%p
-  %strong Title:
-  = @blog.title
-%p
-  %strong Body:
-  = @blog.body
-= link_to 'Edit', edit_blog_path(@blog) if can? :edit, Blog
-|
-= link_to 'Back', blogs_path
+.col-md-8.blog-main
+  %h2.blog-post-title= @blog.title.upcase
+  %p.blog-post-meta Pushlished #{time_ago_in_words(@blog.created_at)} ago
+  %p.blog-post-meta
+    = link_to @blog.status, toggle_status_blog_path(@blog) if can? :toggle_status, Blog
+    \/
+    = link_to 'Show', @blog if can? :read, @blog
+    \/
+    = link_to 'Edit', edit_blog_path(@blog) if can? :edit, @blog
+    \/
+    = link_to 'Destroy', @blog, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, @blog
+  %p= @blog.body
+  = link_to 'Back', blogs_path
